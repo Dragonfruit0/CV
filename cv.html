@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mahfooz Faiz — CV & Community Proposal</title>
+  <meta name="description" content="CV of Mohd Mahfooz Ur Rahman Faiz — student leader and AI developer proposing a Tech & AI Community." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root{
+      --bg:#0b0d10; --card:#12161c; --text:#e8eef5; --muted:#a7b3c6;
+      --accent:#4acfee; --link:#5dd3f3; --chip:#1c222b; --border:#22303f;
+      --ok:#a3eb5f; --warn:#ffd166;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font:500 15px/1.6 Inter, system-ui, Segoe UI, Roboto, Arial, sans-serif}
+    a{color:var(--link);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:900px;margin:40px auto;padding:0 20px}
+    header{display:flex;flex-wrap:wrap;gap:18px;align-items:flex-start;justify-content:space-between;margin-bottom:18px}
+    .name h1{margin:0;font-size:30px;line-height:1.2}
+    .tag{color:var(--muted);margin-top:6px}
+    .contact{display:flex;flex-wrap:wrap;gap:10px;color:var(--muted)}
+    .chip{background:var(--chip);border:1px solid var(--border);padding:6px 10px;border-radius:999px;display:inline-flex;gap:6px;align-items:center}
+    .section{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px;margin:14px 0}
+    .section h2{margin:0 0 10px 0;font-size:18px;color:var(--accent);letter-spacing:.2px}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .full{grid-column:1/-1}
+    .item h3{margin:0 0 6px 0;font-size:16px}
+    .sub{color:var(--muted);font-size:14px;margin-bottom:6px}
+    ul{margin:8px 0 0 18px;padding:0}
+    li{margin:6px 0}
+    .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+    .pill{background:var(--chip);border:1px solid var(--border);padding:4px 10px;border-radius:8px;font-size:13px}
+    .kpi{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+    .kpi span{background:var(--chip);border:1px dashed var(--border);padding:4px 10px;border-radius:8px;font-size:13px}
+    footer{color:var(--muted);font-size:13px;text-align:center;margin:18px 0}
+    .meta{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0}
+    .badge{font-size:12px;background:transparent;border:1px solid var(--border);color:var(--muted);padding:2px 8px;border-radius:999px}
+    .highlight{color:var(--ok);font-weight:600}
+    .note{color:var(--warn)}
+
+    /* Print button */
+    .print-btn{position:fixed;bottom:20px;right:20px;background:var(--accent);color:var(--bg);border:none;border-radius:50%;width:50px;height:50px;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,0.3);z-index:100;transition:transform 0.2s}
+    .print-btn:hover{transform:scale(1.1)}
+
+    /* Print friendly */
+    @media (max-width:720px){.grid{grid-template-columns:1fr}}
+    @media print{
+      :root{--bg:#fff;--card:#fff;--text:#000;--muted:#444;--accent:#000;--link:#000;--chip:#f6f6f6;--border:#ddd}
+      a{text-decoration:none;color:#000}
+      .section{border:1px solid #ccc}
+      .pill,.chip{border-color:#ccc}
+      .wrap{margin:0}
+      .note{color:#333}
+      .print-btn{display:none}
+      header{flex-direction:column;align-items:center;text-align:center}
+      .contact{justify-content:center}
+    }
+
+    /* Proposal specific styles */
+    .proposal-grid{display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));gap:16px;margin-top:16px}
+    .proposal-card{background:var(--chip);border:1px solid var(--border);border-radius:12px;padding:16px}
+    .proposal-card h3{margin-top:0;color:var(--accent)}
+    .timeline{margin:20px 0;padding:0;list-style:none}
+    .timeline-item{position:relative;padding-left:30px;margin-bottom:20px}
+    .timeline-item:before{content:'';position:absolute;left:0;top:5px;width:12px;height:12px;border-radius:50%;background:var(--accent)}
+    .timeline-item:after{content:'';position:absolute;left:5px;top:17px;width:2px;height:calc(100% + 10px);background:var(--border)}
+    .timeline-item:last-child:after{display:none}
+    .proposal-header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+  </style>
+</head>
+<body>
+  <button class="print-btn" onclick="window.print()" title="Print CV">
+    <i class="fas fa-print"></i>
+  </button>
+
+  <main class="wrap" role="main">
+    <header aria-label="Header">
+      <div class="name">
+        <h1>Mohd Mahfooz Ur Rahman Faiz</h1>
+        <div class="tag">Student Leader • AI Developer • Community Builder</div>
+        <div class="meta">
+          <span class="badge">World Teen Parliament (2023)</span>
+          <span class="badge">Hyderabad, India</span>
+        </div>
+      </div>
+      <div class="contact" aria-label="Contact">
+        <span class="chip" aria-label="Location">Hyderabad, India</span>
+        <a class="chip" href="mailto:mahfooozfaiz@gmail.com" aria-label="Email">mahfooozfaiz@gmail.com</a>
+        <a class="chip" href="tel:+919014584819" aria-label="Phone">+91 90145 84819</a>
+        <a class="chip" href="https://linkedin.com/in/mahfooz-faiz-399257306" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+        <a class="chip" href="https://github.com/Dragonfruit0" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
+        <a class="chip" href="https://x.com/mahfooz_faiz" target="_blank" rel="noopener" aria-label="X (Twitter)">X</a>
+      </div>
+    </header>
+
+    <section class="section" aria-labelledby="profile">
+      <h2 id="profile">Profile</h2>
+      <p>
+        Student leader and AI developer who enjoys turning ideas into working demos and helping people learn faster.
+        Member of the World Teen Parliament with experience in speaking, organizing, and collaborating across teams.
+        Passionate about practical AI, peer mentoring, and building a culture of shipping small wins every week.
+        Proposing a student-led Tech & AI Community to help students learn, build, and showcase projects.
+      </p>
+      <div class="kpi" aria-label="Key goals">
+        <span>Hands-on learning approach</span>
+        <span>10+ open-source projects</span>
+        <span>3 campus tools prototyped</span>
+      </div>
+    </section>
+
+    <section class="section grid" aria-labelledby="objective">
+      <div class="full">
+        <h2 id="objective">Objective</h2>
+        <p>
+          Launch a project-first Tech & AI Community that hosts weekly Build Labs, beginner-friendly AI Literacy sessions,
+          open-source sprints, and cross-department Hack Nights—so students can learn together, publish real work,
+          and create tools our campus can actually use.
+        </p>
+      </div>
+    </section>
+
+    <section class="section grid" aria-labelledby="education">
+      <div class="full">
+        <h2 id="education">Education</h2>
+        <div class="item">
+          <h3>B.E., Deccan College of Engineering and Technology</h3>
+          <div class="sub">Hyderabad • Focus: Python, AI/ML, Web Development, Data Analysis</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section grid" aria-labelledby="leadership">
+      <h2 id="leadership" class="full">Leadership</h2>
+
+      <div class="item">
+        <h3>World Teen Parliament — Teen Member (2023)</h3>
+        <div class="sub">Youth leadership, public speaking, cross-cultural teamwork</div>
+        <ul>
+          <li>Represented teen leadership in global forums; practiced clear communication and consensus-building.</li>
+          <li>Contributed to tech-for-impact initiatives and session discussions with a service-first mindset.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <h3>Community Builder — Independent</h3>
+        <div class="sub">Workshops, peer mentoring, content-led learning</div>
+        <ul>
+          <li>Hosted micro-sessions on Streamlit and Hugging Face; helped juniors deploy first apps.</li>
+          <li>Shared daily Python/AI learnings; organized mini build nights with demos and feedback loops.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section grid" aria-labelledby="projects">
+      <h2 id="projects" class="full">Selected Projects</h2>
+
+      <div class="item">
+        <h3>PPS Chatbot & Number Converter</h3>
+        <div class="sub">Python, Streamlit, Hugging Face</div>
+        <ul>
+          <li>Student-focused tool to practice number systems; deployed for hands-on learning.</li>
+        </ul>
+        <div class="chips">
+          <a class="pill" href="https://huggingface.co/spaces/faiz3123/PPS" target="_blank" rel="noopener">Live</a>
+        </div>
+      </div>
+
+      <div class="item">
+        <h3>Career Guide Chatbot</h3>
+        <div class="sub">Python, Streamlit, Gemini</div>
+        <ul>
+          <li>Guides students through interests and pathways; designed prompts and safe responses.</li>
+        </ul>
+        <div class="chips">
+          <a class="pill" href="https://huggingface.co/spaces/faiz3123/career" target="_blank" rel="noopener">Live</a>
+        </div>
+      </div>
+
+      <div class="item">
+        <h3>SkillSphere (CampusTrail-AI)</h3>
+        <div class="sub">AI/Web Platform</div>
+        <ul>
+          <li>Bridges faculty–student skill development; gamified progress tracking.</li>
+        </ul>
+        <div class="chips">
+          <a class="pill" href="https://github.com/Dragonfruit0/campustrail-ai" target="_blank" rel="noopener">Code</a>
+        </div>
+      </div>
+
+      <div class="item">
+        <h3>Hospital Patient Management (Smart Queue)</h3>
+        <div class="sub">Lovable AI</div>
+        <ul>
+          <li>Prototype that routes patients to least-loaded doctors; demonstrated reduced wait times.</li>
+        </ul>
+        <div class="chips">
+          <a class="pill" href="https://patient-data-flashcards-hub.lovable.app/" target="_blank" rel="noopener">Live</a>
+        </div>
+      </div>
+
+      <div class="item">
+        <h3>LinkedIn Post Generator</h3>
+        <div class="sub">Python, Streamlit, Gemini</div>
+        <ul>
+          <li>AI-powered tool to draft posts; designed for quick iteration and learner engagement.</li>
+        </ul>
+        <div class="chips">
+          <a class="pill" href="https://huggingface.co/spaces/faiz3123/poster" target="_blank" rel="noopener">Live</a>
+        </div>
+      </div>
+
+      <div class="item">
+        <h3>Portfolio Website</h3>
+        <div class="sub">HTML, CSS, JavaScript</div>
+        <ul>
+          <li>Responsive personal site highlighting projects, skills, and live links.</li>
+        </ul>
+        <div class="chips">
+          <a class="pill" href="https://dragonfruit0.github.io/portfolio/" target="_blank" rel="noopener">Live</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section grid" aria-labelledby="skills">
+      <h2 id="skills" class="full">Skills</h2>
+      <div class="item">
+        <h3>Programming</h3>
+        <div class="chips">
+          <span class="pill">Python</span><span class="pill">Django</span><span class="pill">JavaScript</span>
+          <span class="pill">Flutter</span><span class="pill">MySQL</span><span class="pill">HTML/CSS</span>
+        </div>
+      </div>
+      <div class="item">
+        <h3>AI & Data</h3>
+        <div class="chips">
+          <span class="pill">Machine Learning</span><span class="pill">Deep Learning</span><span class="pill">Generative AI</span>
+          <span class="pill">LLMs</span><span class="pill">Prompt Engineering</span><span class="pill">Excel</span><span class="pill">Power BI</span>
+        </div>
+      </div>
+      <div class="item">
+        <h3>Community & Ops</h3>
+        <div class="chips">
+          <span class="pill">Workshop Design</span><span class="pill">Event Facilitation</span>
+          <span class="pill">Peer Mentoring</span><span class="pill">Content Strategy</span><span class="pill">Project Management</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section grid" aria-labelledby="certs">
+      <h2 id="certs" class="full">Certifications</h2>
+      <div class="item">
+        <h3>Machine Learning with Python</h3>
+        <div class="sub">Specialization-style program; hands-on notebooks and model evaluation.</div>
+      </div>
+      <div class="item">
+        <h3>LLM & Streamlit Deployments</h3>
+        <div class="sub">Practical projects on Hugging Face Spaces and prompt engineering practice.</div>
+      </div>
+    </section>
+
+    <section class="section grid" aria-labelledby="achievements">
+      <h2 id="achievements" class="full">Achievements</h2>
+      <ul class="full">
+        <li>Built 15+ projects; deployed 3+ AI apps publicly.</li>
+        <li>Mentored beginners from "hello world" to first deployment; consistent community posts.</li>
+      </ul>
+    </section>
+
+    <section class="section" aria-labelledby="proposal">
+      <div class="proposal-header">
+        <h2 id="proposal">Tech & AI Community Proposal</h2>
+      </div>
+      
+      <p>A student-led initiative focused on hands-on learning, collaboration, and building practical solutions for campus challenges.</p>
+      
+      <div class="proposal-grid">
+        <div class="proposal-card">
+          <h3><i class="fas fa-users"></i> Community Structure</h3>
+          <ul>
+            <li>Core team with leads for Tech, AI, Operations, and Outreach</li>
+            <li>Open membership for all students regardless of experience</li>
+            <li>Faculty advisors for guidance and support</li>
+            <li>Alumni network for mentorship and industry insights</li>
+          </ul>
+        </div>
+        
+        <div class="proposal-card">
+          <h3><i class="fas fa-calendar-alt"></i> Weekly Activities</h3>
+          <ul>
+            <li>Build Labs: Hands-on coding sessions</li>
+            <li>AI Literacy 101: Beginner-friendly workshops</li>
+            <li>Open Source Sprints: Collaborative coding</li>
+            <li>Project Showcases: Demo days for feedback</li>
+          </ul>
+        </div>
+        
+        <div class="proposal-card">
+          <h3><i class="fas fa-bullseye"></i> First-Year Goals</h3>
+          <ul>
+            <li>Establish core community of 30+ active members</li>
+            <li>Launch 10+ open-source projects</li>
+            <li>Prototype 3 campus tools</li>
+            <li>Host 2 hackathons</li>
+          </ul>
+        </div>
+        
+        <div class="proposal-card">
+          <h3><i class="fas fa-tools"></i> Proposed Campus Tools</h3>
+          <ul>
+            <li>Attendance dashboard with analytics</li>
+            <li>Centralized event portal</li>
+            <li>AI-powered mentorship matcher</li>
+            <li>Resource sharing platform</li>
+          </ul>
+        </div>
+      </div>
+      
+      <h3 style="margin-top: 20px;">Implementation Timeline</h3>
+      <ul class="timeline">
+        <li class="timeline-item">
+          <strong>Month 1-2:</strong> Core team formation, branding, and recruitment
+        </li>
+        <li class="timeline-item">
+          <strong>Month 3-4:</strong> Weekly workshops and build sessions
+        </li>
+        <li class="timeline-item">
+          <strong>Month 5-6:</strong> First hackathon and project showcase
+        </li>
+        <li class="timeline-item">
+          <strong>Month 7-8:</strong> Campus tool development begins
+        </li>
+        <li class="timeline-item">
+          <strong>Month 9-10:</strong> Second hackathon and mentorship program
+        </li>
+        <li class="timeline-item">
+          <strong>Month 11-12:</strong> Project documentation and year-end showcase
+        </li>
+      </ul>
+      
+      <p class="note">Detailed community charter with roles, responsibilities, and calendar available upon request.</p>
+    </section>
+
+    <section class="section" aria-labelledby="references">
+      <h2 id="references">References</h2>
+      <p>Available upon request (faculty advisors and project collaborators).</p>
+    </section>
+
+    <footer>
+      © 2025 • Mahfooz Faiz — Ready for collaboration and campus impact.
+    </footer>
+  </main>
+  
+  <script>
+    // Simple print functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const printBtn = document.querySelector('.print-btn');
+      
+      // Ensure print button is focused for accessibility
+      printBtn.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          window.print();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
